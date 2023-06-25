@@ -3,17 +3,19 @@
 Servo x_servo;  
 Servo y_servo;
 
-float min_x = 90 - 35;
-float max_x = 90 + 35;
-float min_y = 90 - 20;
-float max_y = 90 + 40;
+float min_x = 75 - 50;
+float max_x = 75 + 50;
+float min_y = 50;
+float max_y = 70;
+float x_position = min_x + (max_x - min_x)/2;
+float y_position = min_y + (max_y - min_y)/2;
 
 void setup() {
   y_servo.attach(6);  // attaches the y servo on pin 6 to the servo object
   x_servo.attach(9);  // attaches the x servo on pin 9 to the servo object
   pinMode (12, OUTPUT);
   digitalWrite (12, HIGH);    
-  x_servo.write(90); y_servo.write(90); delay(1000);  
+  x_servo.write(x_position); y_servo.write(y_position); delay(1000);  
 }
 
 

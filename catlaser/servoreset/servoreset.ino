@@ -9,10 +9,12 @@ void setup() {
   //TURN EVERYTHING OFF
   pinMode (12, OUTPUT);
   digitalWrite (12, LOW);
-  x_servo.write(90); y_servo.write(90); 
+  x_servo.write(90); y_servo.write(0);
+  delay(500);
+  y_servo.detach();
+  x_servo.detach();
 }
 
 
 void loop() {   
 }
-
